@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CounterPointPracticalTest", "CounterPointPracticalTest\CounterPointPracticalTest.csproj", "{2CB8FC9C-4497-4F73-BD6A-B8EDDE24392E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CounterPointPracticalTest.Tests", "CounterPointPracticalTest.Tests\CounterPointPracticalTest.Tests.csproj", "{DAB18716-3D5E-4F00-95E9-999C6B82537B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CounterPointDAL", "CounterPointDAL\CounterPointDAL.csproj", "{5AD0F9BD-D1E1-4A65-93C7-92E82B13266A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CB8FC9C-4497-4F73-BD6A-B8EDDE24392E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CB8FC9C-4497-4F73-BD6A-B8EDDE24392E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CB8FC9C-4497-4F73-BD6A-B8EDDE24392E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CB8FC9C-4497-4F73-BD6A-B8EDDE24392E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAB18716-3D5E-4F00-95E9-999C6B82537B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAB18716-3D5E-4F00-95E9-999C6B82537B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAB18716-3D5E-4F00-95E9-999C6B82537B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAB18716-3D5E-4F00-95E9-999C6B82537B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AD0F9BD-D1E1-4A65-93C7-92E82B13266A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AD0F9BD-D1E1-4A65-93C7-92E82B13266A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AD0F9BD-D1E1-4A65-93C7-92E82B13266A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AD0F9BD-D1E1-4A65-93C7-92E82B13266A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

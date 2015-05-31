@@ -1,0 +1,4 @@
+C:\C#Projects\CounterPointPracticalTest\CounterPointDAL\bin\Debug\CounterPointDAL.dll
+C:\C#Projects\CounterPointPracticalTest\CounterPointDAL\bin\Debug\CounterPointDAL.pdb
+C:\C#Projects\CounterPointPracticalTest\CounterPointDAL\obj\Debug\CounterPointDAL.dll
+C:\C#Projects\CounterPointPracticalTest\CounterPointDAL\obj\Debug\CounterPointDAL.pdb

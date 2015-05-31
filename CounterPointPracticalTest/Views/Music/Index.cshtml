@@ -1,0 +1,73 @@
+﻿@model IEnumerable<CounterPointPracticalTest.Models.MusicModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using CounterPointPracticalTest.Extensions
+
+<h2>Index</h2>
+<div>page @ViewBag.CurrentPage of @ViewBag.NumberOfPages</div>
+<div>
+    @if (ViewBag.FirstDisplay)
+    {
+        @Html.ActionLink("first", "Page", new { page = ViewBag.FirstPage })
+    }
+    @if (ViewBag.PreviousDisplay)
+    {
+        @Html.ActionLink("previous", "Page", new {page = ViewBag.PreviousPage})
+    }
+    @Html.Raw(Html.Paged((int)ViewBag.CurrentPage, (int)ViewBag.NumberOfPages, (int)ViewBag.StartPage, i => Url.Action("Page", new { page = i })))
+    @if (ViewBag.NextDisplay)
+    {
+        @Html.ActionLink("next", "Page", new { page = ViewBag.NextPage })
+    }
+    @if (ViewBag.LastDisplay)
+    {
+        @Html.ActionLink("last", "Page", new { page = ViewBag.LastPage }) 
+    }
+
+</div>
+<table>
+    <tr>
+        <th>Artist</th>
+        <th>Album</th>
+        <th>Catalogue ID</th>
+        <th>Total Sales</th>
+        <th>Date Sold</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.MusicCD.Artist
+            </td>
+            <td>
+                @item.MusicCD.AlbumTitle
+            </td>
+            <td>
+                @item.MusicCD.CatalogueNumber
+            </td>
+            <td>
+                @item.SalesLine.UnitsSold
+            </td>
+            <td>
+                @if (item.SalesLine.DateSold != null)
+                {
+                    @item.SalesLine.DateSold
+                }
+                else
+                {
+                    <span>Not Sold</span>
+                }
+            </td>
+            <td>
+                @Html.ActionLink("Create", "Create", new { productId = item.MusicCD.ProductId }) |
+            @Html.ActionLink("Details", "Details", new { productId = item.MusicCD.ProductId })|
+            @Html.ActionLink("Delete", "Delete", new { productId = item.MusicCD.ProductId })
+            </td>
+        </tr>
+    }
+
+</table>

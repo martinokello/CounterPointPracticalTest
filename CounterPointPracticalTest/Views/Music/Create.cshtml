@@ -1,0 +1,48 @@
+﻿@model CounterPointPracticalTest.Models.MusicModel
+
+@{
+    ViewBag.Title = "InsertSalesLineToProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Insert SalesLine To Product</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(false)
+
+    <fieldset>
+        <legend>MusicModel</legend>
+        <p>
+            @Html.LabelFor(p => Model.MusicCD.AlbumTitle) <br/>
+            @Html.TextBoxFor(p => Model.MusicCD.AlbumTitle)
+        </p>
+        <p>
+            @Html.LabelFor(p => Model.MusicCD.Artist) <br/>
+            @Html.TextBoxFor(p => Model.MusicCD.Artist)
+        </p>
+        <p>
+            @Html.LabelFor(p => Model.MusicCD.CatalogueNumber) <br/>
+            @Html.TextBoxFor(p => Model.MusicCD.CatalogueNumber)
+        </p>
+        <p>
+            @Html.LabelFor(p => Model.SalesLine.UnitsSold) <br/>
+            @Html.TextBoxFor(p => Model.SalesLine.UnitsSold)
+        </p>
+        <p>
+            @Html.LabelFor(p => Model.SalesLine.DateSold) date format: dd/mm/yyyy <br/>
+            @Html.TextBoxFor(p => Model.SalesLine.DateSold)
+            @Html.HiddenFor(p => Model.MusicCD.ProductId)
+        </p>
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

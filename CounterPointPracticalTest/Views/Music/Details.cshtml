@@ -1,0 +1,37 @@
+﻿@model CounterPointPracticalTest.Models.MusicModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+    <fieldset>
+        <legend>MusicModel</legend>
+        <p>
+            
+            @Html.LabelFor(p => Model.MusicCD.AlbumTitle) <br/>
+            @Model.MusicCD.AlbumTitle <br/>
+        </p>
+        <p>
+            @Html.LabelFor(p => Model.MusicCD.Artist) <br/>
+            @Model.MusicCD.Artist <br/>
+        </p>
+        <p>
+            @Html.LabelFor(p => Model.MusicCD.CatalogueNumber) <br/>
+            @Model.MusicCD.CatalogueNumber <br/>
+        </p>
+        <p>
+            @Html.LabelFor(p => Model.SalesLine.UnitsSold) <br/>
+            @Model.SalesLine.UnitsSold <br/>
+        </p>
+        <p>
+            @Html.LabelFor(p => Model.SalesLine.DateSold) <br/>
+            @Model.SalesLine.DateSold <br/>
+            @Html.HiddenFor(p => Model.MusicCD.ProductId)
+        </p>
+    </fieldset>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
